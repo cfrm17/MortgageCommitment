@@ -11,7 +11,7 @@ A mortgage commitment can be approximately regarded as an American look-back opt
 
 In practice the holder of the commitment does not actually exercise the option optimally with regards to the American feature of the option. To capture the non-optimality of the exercise, they propose to model these commitments as a series of European swaptions, where the expiry dates on the options is determined using historical closing percentages. 
 
-This effectively assumes that the option to exercise the commitment is optimally exercised, but the time of exercise is based on historical data. For a given initial commitment term, people have looked at historical closing ratios to express a commitment as a linear combination of European swaptions. The historical exercise dates are then bucketed into monthly time intervals (more precisely, 30 day increments) to determine the expected closing ratios. 
+This effectively assumes that the callalbe option (see https://finpricing.com/lib/EqCallable.html) to exercise the commitment is optimally exercised, but the time of exercise is based on historical data. For a given initial commitment term, people have looked at historical closing ratios to express a commitment as a linear combination of European swaptions. The historical exercise dates are then bucketed into monthly time intervals (more precisely, 30 day increments) to determine the expected closing ratios. 
 
 Once this matrix is defined, it is possible to determine how many mortgages in the pipeline are expected to close. A further approximation is made regarding the term that these mortgages close at. This is due to the fact that historically not every commitment ends up closing at the term that the initial commitment was provided. 
 
@@ -28,10 +28,3 @@ The commitments are (arbitrarily) grouped together as follows: first three month
 This will be further demonstrated by example in the results section of the vetting report. Finally, the strike price of each swaption is taken to be the weighted average commitment rate for each group, with the weighting corresponding to the notional multiplied by the closing ratios of the commitments.
 
 
-Reference:
-
-https://finpricing.com/lib/EqCallable.html
-
-https://zenodo.org/record/6547376/files/MortgageCommitment.pdf
-
-https://zenodo.org/record/6547376#.YpDvTKgpDq4
