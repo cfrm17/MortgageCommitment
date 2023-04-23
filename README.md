@@ -29,4 +29,4 @@ This will be further demonstrated by example in the results section of the vetti
 
 References:
 
-https://github.com/cfrm17/MortgageCommitment
+https://finpricing.com/aboutus.html
